@@ -1,0 +1,28 @@
+* Kiến trúc đề xuất tổng thể
+- Legacy Core Banking (SOAP)
+    + Giao thức: SOAP over HTTP(S)
+    + Định dạng dữ liệu: XML
+    + Bảo mật: WS-Security, SSL/TLS, SAML
+    + Mục tiêu: Đảm bảo tính toàn vẹn, bảo mật, và khả năng giao dịch phân tán
+    + Ưu điểm: Độ tin cậy cao, chuẩn hóa, dễ kiểm soát
+    + Nhược điểm: Hiệu suất thấp hơn, khó mở rộng nhanh
+- Microservices (REST)
+    + Giao thức: HTTP/HTTPS
+    + Định dạng dữ liệu: JSON (hoặc XML)
+    + Bảo mật: OAuth2, JWT, HTTPS
+    + Mục tiêu: Tốc độ, linh hoạt, dễ mở rộng và tích hợp
+    + Ưu điểm: Hiệu suất cao, dễ phát triển, dễ tích hợp
+    + Nhược điểm: Không hỗ trợ giao dịch phân tán phức tạp
+
+* Khuyến nghị tổng kết
+- SOAP cho hệ thống Legacy Core Banking -> Đảm bảo tính toàn vẹn, bảo mật, và khả năng giao dịch phân tán
+- REST cho hệ thống Microservices mới -> Tối ưu hiệu suất, linh hoạt, dễ mở rộng và phù hợp với phát triển nhanh
+
+* Các khái niệm cốt lõi
+- SOAP: Giao thức dựa trên XML, dùng cho trao đổi dữ liệu có cấu trúc giữa các ứng dụng.
+Hỗ trợ WS-Security, WSDL, và giao dịch phân tán
+- REST: Kiến trúc web service dựa trên HTTP, sử dụng các phương thức GET, POST, PUT, DELETE.
+Dữ liệu thường ở dạng JSON hoặc XML
+- WS-Security: Chuẩn bảo mật cho SOAP, cung cấp mã hóa, xác thực, và chữ ký số
+- JSON: Định dạng dữ liệu nhẹ, dễ đọc, phổ biến trong REST API
+- WSDL: Tài liệu mô tả chi tiết cấu trúc và cách gọi các dịch vụ SOAP
